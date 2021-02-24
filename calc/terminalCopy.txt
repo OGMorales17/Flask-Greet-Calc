@@ -1,0 +1,232 @@
+Orly@DESKTOP-34R8HEG MINGW64 ~
+$ cd desktop/springb/
+
+Orly@DESKTOP-34R8HEG MINGW64 ~/desktop/springb
+$ ls
+ SpringBoard_CSS/   Springboard_Projects/       chrome-console-printout/     jQuery/
+ Springboard/      'SprintBoard screenshots'/   curl-7.74.0_2-win64-mingw/   meme-machine-master/
+
+Orly@DESKTOP-34R8HEG MINGW64 ~/desktop/springb
+$ cd springboard_projects
+
+Orly@DESKTOP-34R8HEG MINGW64 ~/desktop/springb/springboard_projects
+$ cd flask-greet-calc
+
+Orly@DESKTOP-34R8HEG MINGW64 ~/desktop/springb/springboard_projects/flask-greet-calc
+$ ls
+calc/  greet/
+
+Orly@DESKTOP-34R8HEG MINGW64 ~/desktop/springb/springboard_projects/flask-greet-calc
+$ echo $FLASK_ENV
+development
+
+Orly@DESKTOP-34R8HEG MINGW64 ~/desktop/springb/springboard_projects/flask-greet-calc
+$ python -m venv venv
+
+Orly@DESKTOP-34R8HEG MINGW64 ~/desktop/springb/springboard_projects/flask-greet-calc
+$ source venv/scripts/activate
+(venv)
+Orly@DESKTOP-34R8HEG MINGW64 ~/desktop/springb/springboard_projects/flask-greet-calc
+$ pip install flask
+Collecting flask
+  Using cached Flask-1.1.2-py2.py3-none-any.whl (94 kB)
+Collecting itsdangerous>=0.24
+  Using cached itsdangerous-1.1.0-py2.py3-none-any.whl (16 kB)
+Collecting Werkzeug>=0.15
+  Using cached Werkzeug-1.0.1-py2.py3-none-any.whl (298 kB)
+Collecting Jinja2>=2.10.1
+  Using cached Jinja2-2.11.3-py2.py3-none-any.whl (125 kB)
+Collecting click>=5.1
+  Using cached click-7.1.2-py2.py3-none-any.whl (82 kB)
+Collecting MarkupSafe>=0.23
+  Using cached MarkupSafe-1.1.1-cp39-cp39-win_amd64.whl (16 kB)
+Installing collected packages: itsdangerous, Werkzeug, MarkupSafe, Jinja2, click, flask
+Successfully installed Jinja2-2.11.3 MarkupSafe-1.1.1 Werkzeug-1.0.1 click-7.1.2 flask-1.1.2 itsdangerous-1.1.0
+WARNING: You are using pip version 20.2.3; however, version 21.0.1 is available.
+You should consider upgrading via the 'c:\users\orly\desktop\springb\springboard_projects\flask-greet-calc\venv\scripts\python.exe -m pip install --upgrade pip' command.
+(venv)
+Orly@DESKTOP-34R8HEG MINGW64 ~/desktop/springb/springboard_projects/flask-greet-calc
+$ pip freeze > requirements.txt
+(venv)
+Orly@DESKTOP-34R8HEG MINGW64 ~/desktop/springb/springboard_projects/flask-greet-calc
+$ cat requirements.txt
+click==7.1.2
+Flask==1.1.2
+itsdangerous==1.1.0
+Jinja2==2.11.3
+MarkupSafe==1.1.1
+Werkzeug==1.0.1
+(venv)
+Orly@DESKTOP-34R8HEG MINGW64 ~/desktop/springb/springboard_projects/flask-greet-calc
+$ git status
+fatal: not a git repository (or any of the parent directories): .git
+(venv)
+Orly@DESKTOP-34R8HEG MINGW64 ~/desktop/springb/springboard_projects/flask-greet-calc
+$ git init
+Initialized empty Git repository in C:/Users/Orly/Desktop/SpringB/Springboard_Projects/flask-greet-calc/.git/
+(venv)
+Orly@DESKTOP-34R8HEG MINGW64 ~/desktop/springb/springboard_projects/flask-greet-calc (master)
+$ touch .gitignore
+(venv)
+Orly@DESKTOP-34R8HEG MINGW64 ~/desktop/springb/springboard_projects/flask-greet-calc (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        calc/
+        greet/
+        requirements.txt
+        venv/
+
+nothing added to commit but untracked files present (use "git add" to track)
+(venv)
+Orly@DESKTOP-34R8HEG MINGW64 ~/desktop/springb/springboard_projects/flask-greet-calc (master)
+$ git add .
+warning: LF will be replaced by CRLF in calc/app.py.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in calc/operations.py.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in calc/test.py.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in greet/test.py.
+The file will have its original line endings in your working directory
+(venv)
+Orly@DESKTOP-34R8HEG MINGW64 ~/desktop/springb/springboard_projects/flask-greet-calc (master)
+$ git add .
+(venv)
+Orly@DESKTOP-34R8HEG MINGW64 ~/desktop/springb/springboard_projects/flask-greet-calc (master)
+$ git commit -m "pushing venv files into .gitignore"
+[master (root-commit) 2fe2067] pushing venv files into .gitignore
+ 7 files changed, 94 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 calc/app.py
+ create mode 100644 calc/operations.py
+ create mode 100644 calc/test.py
+ create mode 100644 greet/app.py
+ create mode 100644 greet/test.py
+ create mode 100644 requirements.txt
+(venv)
+Orly@DESKTOP-34R8HEG MINGW64 ~/desktop/springb/springboard_projects/flask-greet-calc (master)
+$ ls
+calc/  greet/  requirements.txt  venv/
+(venv)
+Orly@DESKTOP-34R8HEG MINGW64 ~/desktop/springb/springboard_projects/flask-greet-calc (master)
+$ python -m unittest test.py
+E
+======================================================================
+ERROR: py (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: py
+Traceback (most recent call last):
+  File "C:\Python39\lib\unittest\loader.py", line 154, in loadTestsFromName
+    module = __import__(module_name)
+ModuleNotFoundError: No module named 'test.py'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+FAILED (errors=1)
+(venv)
+Orly@DESKTOP-34R8HEG MINGW64 ~/desktop/springb/springboard_projects/flask-greet-calc (master)
+$ cd greet
+(venv)
+Orly@DESKTOP-34R8HEG MINGW64 ~/desktop/springb/springboard_projects/flask-greet-calc/greet (master)
+$ ls
+app.py  test.py
+(venv)
+Orly@DESKTOP-34R8HEG MINGW64 ~/desktop/springb/springboard_projects/flask-greet-calc/greet (master)
+$ python -m unittest test.py
+...
+----------------------------------------------------------------------
+Ran 3 tests in 0.008s
+
+OK
+(venv)
+Orly@DESKTOP-34R8HEG MINGW64 ~/desktop/springb/springboard_projects/flask-greet-calc/greet (master)
+$ python -m unittest test.py
+...
+----------------------------------------------------------------------
+Ran 3 tests in 0.018s
+
+OK
+(venv)
+Orly@DESKTOP-34R8HEG MINGW64 ~/desktop/springb/springboard_projects/flask-greet-calc/greet (master)
+$ cd ..
+(venv)
+Orly@DESKTOP-34R8HEG MINGW64 ~/desktop/springb/springboard_projects/flask-greet-calc (master)
+$ cd calc
+
+#
+#
+#
+#
+# THE NEXT FAIL: BASICALLY I WENT STRAIGHFOWARD TO PART TWO, AND THE TEST CODE ON test.py WAS TESTING FUNCTIONS THAT WASEN'T BUILD YET 
+#
+#
+#
+#
+
+Orly@DESKTOP-34R8HEG MINGW64 ~/desktop/springb/springboard_projects/flask-greet-calc/calc (master)
+$ python -m unittest test.py
+F.FFF
+======================================================================
+FAIL: test_add (test.TestCalculator)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Orly\desktop\springb\springboard_projects\flask-greet-calc\calc\test.py", line 11, in test_add
+    self.assertEqual(response.status_code, 200)
+AssertionError: 404 != 200
+
+======================================================================
+FAIL: test_division (test.TestCalculator)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Orly\desktop\springb\springboard_projects\flask-greet-calc\calc\test.py", line 26, in test_division
+    self.assertEqual(response.status_code, 200)
+AssertionError: 404 != 200
+
+======================================================================
+FAIL: test_multiply (test.TestCalculator)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Orly\desktop\springb\springboard_projects\flask-greet-calc\calc\test.py", line 21, in test_multiply
+    self.assertEqual(response.status_code, 200)
+AssertionError: 404 != 200
+
+======================================================================
+FAIL: test_subtract (test.TestCalculator)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Orly\desktop\springb\springboard_projects\flask-greet-calc\calc\test.py", line 16, in test_subtract
+    self.assertEqual(response.status_code, 200)
+AssertionError: 404 != 200
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.012s
+
+FAILED (failures=4)
+
+#
+#
+#
+#
+# HERE, BOFORE RUN ANY TEST, I WENT BACK TO app.py AND BUILD THE 4 FUNCTIONS FOR EACH SINGLE MATH OPERATION
+#
+#
+#
+
+(venv)
+Orly@DESKTOP-34R8HEG MINGW64 ~/desktop/springb/springboard_projects/flask-greet-calc/calc (master)
+$ python -m unittest test.py
+.....
+----------------------------------------------------------------------
+Ran 5 tests in 0.011s
+
+OK
+
+
